@@ -21,5 +21,13 @@ function queueTime(customers, n) {
 	//total time is a max of tills array elements
   return Math.max(...tills);
 }
+//second mode with reduce
+function queueTime(customers, n) {
+
+  return Math.max(...(customers.reduce((prev, next) => {
+    prev[prev.indexOf(Math.min(...prev))] += next;
+    return prev;
+  }, Array(n).fill(0))));
+}
 
 module.exports = queueTime;

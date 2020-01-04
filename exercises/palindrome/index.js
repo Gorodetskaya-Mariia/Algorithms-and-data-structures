@@ -12,9 +12,11 @@ function palindrome(str) {
 	return str === rev;
 }
 
-function palindrome1(str) {
+//second mode
+function palindrome(str) {
 	return str.split("").every((char, i) => {
 		return char === str[str.length - 1 - i];
 	});
 }
+
 module.exports = palindrome;

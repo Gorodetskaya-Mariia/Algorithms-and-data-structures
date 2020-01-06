@@ -15,11 +15,13 @@ function reverse(str) {
 	let result = reversedString.join("")
 	return result;
 }
-//
+
+//second mode
 function reverse1(str) {
 	return str.split("").reverse().join("");
 }
 
+//third mode
 function reverse2(str) {
 	return str.split("").reduce((rev, char) => char + rev,"");
 }

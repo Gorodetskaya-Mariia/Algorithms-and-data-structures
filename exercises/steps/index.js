@@ -62,3 +62,66 @@ function steps(n, row = 0, str = "") {
 }
 
 module.exports = steps;
+
+function Calculator(){
+	this.read = function(){
+		this.a = +prompt("Enter first number");
+		this.b = +prompt("Enter second number");
+	}
+
+	this.sum = function(){
+		return this.a + this.b;
+	}
+
+	this.mul = function(){
+		return this.a*this.b;
+	}
+}
+
+calculator = new Calculator();
+calculator.read();
+
+function Accumulator(startingValue){
+	this.value = startingValue;
+
+	this.read = function(){
+		this.newValue = +prompt("Enter new value",0);
+		this.value+= this.newValue;
+	}
+}
+
+function sumSalaries(array){
+	let sum = 0;
+	let arr = Object.values(array);
+	if(array.length){
+		for(let value of arr){
+			sum+= arr[value];
+		}
+	}
+	return sum;
+}
+
+function count(obj){
+	return Object.keys(obj).length;
+}
+
+function topSalary(salaries){
+	let userName = null;
+	let max = 0;
+	for(let [name, value] of Object.entries(salaries)){
+		if(value > max){
+			max = value;
+			userName = name;
+		}
+	}
+	return userName;
+}
+
+function alclean(arr){
+	return arr.map(item => {
+		let el = item.toLowerCase().split("").sort().join("");
+		arr.filter(i=>{
+			item === i.toLowerCase().split("").sort().join("")
+		})
+	});
+}

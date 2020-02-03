@@ -29,7 +29,7 @@ function steps(n) {
 	}
 }
 
-//second mode
+//second mode has O(N^2) runtime complexity
 function steps(n) {
 	for(let row = 1; row <= n; row++){
 		let str = "";

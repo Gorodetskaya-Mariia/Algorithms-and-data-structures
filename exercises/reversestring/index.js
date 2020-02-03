@@ -6,6 +6,7 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
+//this algorithm has O(N) runtime complexity
 function reverse(str) {
 	let splittedString = str.split("");
 	let reversedString = [];
